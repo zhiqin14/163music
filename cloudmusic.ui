@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CloudMusic</class>
+ <widget class="QMainWindow" name="CloudMusic">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>拾陆字濑户2.0-1</family>
+    <pointsize>12</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>CloudMusic</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1281</width>
+      <height>771</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="login">
+     <attribute name="title">
+      <string>登录</string>
+     </attribute>
+     <widget class="QLabel" name="loginStatus">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>1231</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>你还没有登录那！赶快去登录叭！</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="loginButton">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>150</y>
+        <width>1171</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>登录！</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="qrcode">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>300</y>
+        <width>180</width>
+        <height>180</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Waiting...</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>个人信息</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="playlist">
+     <attribute name="title">
+      <string>歌单</string>
+     </attribute>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
