@@ -1,5 +1,6 @@
 import sys
 import requests
+import webbrowser
 from time import sleep
 from PySide6.QtWidgets import QMainWindow, QApplication
 from PySide6.QtGui import QPixmap
@@ -28,9 +29,10 @@ class CloudMusic(QMainWindow, Ui_CloudMusic):
         # print(qr)
         qr_base64 = qr['data']['qrimg'].split(',')[1]
         B64code2Img(qr_base64)
-        qr_pixmap = QPixmap('qr.png')
-        QApplication.processEvents()
-        self.qrcode.setPixmap(qr_pixmap)
+        webbrowser.open('qr.png')
+        # qr_pixmap = QPixmap('qr.png')
+        # QApplication.processEvents()
+        # self.qrcode.setPixmap(qr_pixmap)
         scan_status = requests.get(const.api_url+const.qr_scan_status+f'?key={key}').json()
         print(scan_status)
         while scan_status['code'] != 803:
