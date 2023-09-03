@@ -39,7 +39,7 @@ class CloudMusic(QMainWindow, Ui_CloudMusic):
             if scan_status['code'] == 800:
                 self.qrcode.setText('二维码过期了捏，重新登录吧')
             elif scan_status['code'] == 802:
-                self.qrcode.setText('扫码成功！')
+                self.qrcode.setText('好耶！扫码成功！')
             scan_status = requests.get(const.api_url + const.qr_scan_status + f'key={key}').json()
             sleep(3)
         cookie = open('cookie', 'w', encoding='utf-8')
